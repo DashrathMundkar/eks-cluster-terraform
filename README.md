@@ -172,4 +172,4 @@ terraform destroy
 
 ## Architecture diagram
 
-- SVG: `arch.png`
+![arch.png](arch.png)
