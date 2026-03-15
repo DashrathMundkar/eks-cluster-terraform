@@ -1,0 +1,23 @@
+# vserv.yml
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: nginx-virtualservice
+  namespace: istio-system
+  
+spec:
+  hosts:
+    - "ADD YOUR DOMAIN NAME HERE"
+  gateways:
+    - gateway
+  http:
+    - match:
+        - uri:
+            prefix: /myapp  # Match all URIs
+      rewrite:
+        uri: /  # Rewrite to root
+      route:
+        - destination:
+            host: nginx.nginx.svc.cluster.local
+            port:
+              number: 80

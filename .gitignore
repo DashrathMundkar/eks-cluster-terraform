@@ -1,0 +1,20 @@
+# macOS / IDE
+.DS_Store
+.idea/
+
+# Local secrets and SSH artifacts
+local-secrets/
+*.pem
+
+# Terraform local state and cache
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.*
+terraform/crash.log
+terraform/crash.*.log
+
+# Keep local input values out of Git
+terraform/terraform.tfvars
+*.auto.tfvars
+

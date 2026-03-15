@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: gateway
+  namespace: istio-system
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+  - name: http
+    port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "ADD YOUR DOMAIN NAME HERE"
