@@ -173,10 +173,3 @@ terraform destroy
 ## Architecture diagram
 
 - SVG: `arch.png`
-
-## GitHub safety notes
-
-- Do not commit Terraform state files (`terraform.tfstate*`).
-- Do not commit secrets or private keys.
-- Keep `terraform/terraform.tfvars` local if it contains sensitive values.
-- Confirm your `.gitignore` is active before pushing.
